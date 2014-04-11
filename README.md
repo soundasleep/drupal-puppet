@@ -8,8 +8,10 @@ An experiment in using Puppet to configure a Drupal server from scratch.
 Installation basically covers these steps (run everything as `sudo`):
 
 1. [Install Puppet](http://docs.puppetlabs.com/guides/installation.html#debian-and-ubuntu)
+1. Checkout repository
+1. Build and run
 
-# Standalone puppet
+### Standalone puppet
 
 1. `wget https://apt.puppetlabs.com/puppetlabs-release-precise.deb && dpkg -i puppetlabs-release-precise.deb && apt-get update` to use the Puppet Debian repository (fixes [an install bug](https://groups.google.com/forum/#!msg/puppet-users/W59B4KEx4e8/cQ7TbDllV3oJ))
 1. `apt-get install puppet-common`
@@ -42,4 +44,5 @@ However it doesn't actually install anything except an empty Apache. What's up n
 * [puppet-dashboard](https://github.com/sodabrew/puppet-dashboard) is an open source GUI for managing Puppet nodes
 * Put /etc/puppet under Git so we can keep track of modules. We can use git submodules to reference external modules, or use `puppet module` to install modules directly into our repository.
 * Installing a new module: `puppet module search apache`
+* How can we keep track of Drupal SVN changes etc?
 * Another idea [is to install Jenkins](http://serverfault.com/a/372660/72354) and configure that to instead track SVN changes, rebuilds etc - how easy is it to control Jenkins from the command line?
