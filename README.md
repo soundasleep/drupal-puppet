@@ -37,5 +37,9 @@ However it doesn't actually install anything except an empty Apache. What's up n
 
 # Ideas...
 
+* [drupal-puppet-module](https://github.com/nmcteam/drupal-puppet-module) will probably help
+* drush is a command line interface for configuring Drupal modules - see http://projects.puppetlabs.com/projects/1/wiki/Drupal_Patterns
+* [puppet-dashboard](https://github.com/sodabrew/puppet-dashboard) is an open source GUI for managing Puppet nodes
 * Put /etc/puppet under Git so we can keep track of modules. We can use git submodules to reference external modules, or use `puppet module` to install modules directly into our repository.
 * Installing a new module: `puppet module search apache`
+* Another idea [is to install Jenkins](http://serverfault.com/a/372660/72354) and configure that to instead track SVN changes, rebuilds etc - how easy is it to control Jenkins from the command line?
